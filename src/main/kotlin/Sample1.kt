@@ -1,11 +1,5 @@
 fun main() {
-    // 3. String Template
 
-    val name = "David"
-    val lastName = "Kim"
-    println("my name is ${name + lastName} hi")
-    println("is this true? ${1 == 0}")
-    println("this is 2\$")
 }
 
 // 1.함수
