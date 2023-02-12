@@ -1,4 +1,4 @@
-class Human(val name: String = "defaultName") {
+open class Human(val name: String = "defaultName") {
     init {
         println("New human has been born!!")
     }
@@ -7,13 +7,19 @@ class Human(val name: String = "defaultName") {
         println("my name is ${name}, ${age}years old")
     }
 
-    fun eatingCake() {
-        println("${this.name} this is yummyy")
+    open fun eatingCake() {
+        println("this is yummyy")
+    }
+}
+
+class Korean : Human() {
+    override fun eatingCake() {
+        super.eatingCake()
+        println("한국인의 밥상")
+        println("my name is ${name}")
     }
 }
 
 fun main() {
-    val human = Human()
-    human.eatingCake()
-    Human("jongchan", 20).eatingCake()
+    Korean().eatingCake()
 }
